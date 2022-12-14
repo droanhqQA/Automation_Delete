@@ -74,17 +74,13 @@ public class Report {
 		log.info("GraphQL Deleted");
 //		allDelete.deleteGoogleSheet();
 //		log.info("Google Sheet Deleted");
-		allDelete.deleteAutoApp();
+		
 		log.info("App Deleted");
 		driver.navigate().refresh();
-		allDelete.deleteExportApp();
+		allDelete.deleteApp("ExportAuto");
+		
 	}
-	//@Ignore
-	@Test
-	public void DeleteExportApp()
-	{
-		allDelete.deleteExportApp();
-	}
+	
 //	@AfterMethod
 //	public void tearOff()
 //	{
