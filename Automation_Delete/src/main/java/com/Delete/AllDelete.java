@@ -62,6 +62,7 @@ public class AllDelete {
 			e.printStackTrace();
 		} 
 		driver.findElement(By.xpath("//*[@data-appname='"+app_name+"']/div/div[2]/div[2]/div/img")).click();
+		driversleep();
 		driver.findElement(By.xpath("//*[@data-appname='"+app_name+"']/div/div[2]/div[2]/div/div/div[5]")).click();
 		System.out.println( app_name+" deleted");
 		}
