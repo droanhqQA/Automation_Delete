@@ -63,6 +63,9 @@ public class Report {
 
 	@Test
 	public void DeleteAll() {
+		
+		allDelete.deleteApp("ExportAuto");
+		allDelete.deleteApp("AutoApp");
 		allDelete.navigatetoConnector();
 		allDelete.deleteConnector("AutoTestMongo");
 //		log.info("Mongo Deleted");
@@ -75,10 +78,7 @@ public class Report {
 //		allDelete.deleteGoogleSheet();
 //		log.info("Google Sheet Deleted");
 		
-		log.info("App Deleted");
-		driver.navigate().refresh();
-		allDelete.deleteApp("ExportAuto");
-		allDelete.deleteApp("AutoApp");
+		
 		
 	}
 	
