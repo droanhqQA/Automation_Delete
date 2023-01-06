@@ -75,6 +75,11 @@ public class AllDelete {
 	
 	public void driversleep()
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
