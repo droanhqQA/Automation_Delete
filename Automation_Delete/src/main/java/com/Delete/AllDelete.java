@@ -63,8 +63,15 @@ public class AllDelete {
 		} 
 		driver.findElement(By.xpath("//*[@data-appname='"+app_name+"']/div/div[2]/div[2]/div/img")).click();
 		driversleep();
-		driver.findElement(By.xpath("//*[@data-appname='"+app_name+"']/div/div[2]/div[2]/div/div/div[5]")).click();
-		System.out.println( app_name+" deleted");
+		driver.findElement(By.xpath("//*[@data-appname='"+app_name+"']/descendant::div[contains(@class,'delete-app')]")).click();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		driver.findElement(By.xpath("//div[contains(@class,'deleteApp')]/div[2]/div[1]")).click();
 		}
 		else
 		{
