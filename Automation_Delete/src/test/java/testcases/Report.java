@@ -78,6 +78,7 @@ public class Report {
 		log.info("App Deleted");
 		driver.navigate().refresh();
 		allDelete.deleteApp("ExportAuto");
+		allDelete.deleteApp("AutoApp");
 		
 	}
 	
